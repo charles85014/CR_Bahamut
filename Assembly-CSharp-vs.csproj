@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{55955165-5CD2-7DD0-BB51-550A32B267FD}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_STANDALONE;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_0;UNITY_4_0;UNITY_STANDALONE_WIN;ENABLE_PROFILER;UNITY_EDITOR;UNITY_TEAM_LICENSE;000</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\ButtonGUIObj\Script\StartGUI.cs" />
+     <Compile Include="Assets\Common\PictureAlphaFlicker.cs" />
+     <Compile Include="Assets\Common\Re3ObjectScale.cs" />
+     <Compile Include="Assets\Common\ScoreRecord.cs" />
+     <Compile Include="Assets\Common\ScreenTest.cs" />
+     <Compile Include="Assets\Common\StageData.cs" />
+     <Compile Include="Assets\Common\TestUseChangeStage.cs" />
+     <Compile Include="Assets\Common\ThreeTwoOne.cs" />
+     <Compile Include="Assets\Script\BGMAudio\StartBGM.cs" />
+     <Compile Include="Assets\Script\Bridge\FourMoveControl.cs" />
+     <Compile Include="Assets\Script\Bridge\Move_MoveConveyor01.cs" />
+     <Compile Include="Assets\Script\Bridge\Move_MoveConveyor02.cs" />
+     <Compile Include="Assets\Script\Bridge\ThreeMoveControl.cs" />
+     <Compile Include="Assets\Script\Bridge\TwoMoveControl.cs" />
+     <Compile Include="Assets\Script\ChangPicture.cs" />
+     <Compile Include="Assets\Script\DeadLine.cs" />
+     <Compile Include="Assets\Script\GameManager.cs" />
+     <Compile Include="Assets\Script\Gui\IcebergGameOverGui.cs" />
+     <Compile Include="Assets\Script\Gui\IcebergGui.cs" />
+     <Compile Include="Assets\Script\Gui\IcebergGuiAppear.cs" />
+     <Compile Include="Assets\Script\Gui\MonkeyGameOverGui.cs" />
+     <Compile Include="Assets\Script\Gui\MonkeyGui.cs" />
+     <Compile Include="Assets\Script\Gui\MonkeyGuiAppear.cs" />
+     <Compile Include="Assets\Script\Gui\ReGameOverGUI.cs" />
+     <Compile Include="Assets\Script\Gui\ReGui.cs" />
+     <Compile Include="Assets\Script\Gui\ReGuiAppear.cs" />
+     <Compile Include="Assets\Script\Iceberg\IceRoadMove.cs" />
+     <Compile Include="Assets\Script\Iceberg\IcebergCollision.cs" />
+     <Compile Include="Assets\Script\Iceberg\PenguinCollision.cs" />
+     <Compile Include="Assets\Script\Iceberg\PenguinCollision02.cs" />
+     <Compile Include="Assets\Script\Iceberg\TrapCreat01.cs" />
+     <Compile Include="Assets\Script\Iceberg\TrapDead.cs" />
+     <Compile Include="Assets\Script\Iceberg\TrapXMove.cs" />
+     <Compile Include="Assets\Script\Monkey\BPicChang.cs" />
+     <Compile Include="Assets\Script\Monkey\DPicChang.cs" />
+     <Compile Include="Assets\Script\Monkey\FruitCreat01.cs" />
+     <Compile Include="Assets\Script\Monkey\FruitDestory.cs" />
+     <Compile Include="Assets\Script\Monkey\FruitShake.cs" />
+     <Compile Include="Assets\Script\Monkey\MonPicChangTrigger.cs" />
+     <Compile Include="Assets\Script\Monkey\MonkeyCreat01.cs" />
+     <Compile Include="Assets\Script\Monkey\NPicChang.cs" />
+     <Compile Include="Assets\Script\Object\OBJCreat\BatteryCreat.cs" />
+     <Compile Include="Assets\Script\Object\OBJScore\ReScoreCounter.cs" />
+     <Compile Include="Assets\Script\Object\OBJTrigger\M_S1MonkeyMove.cs" />
+     <Compile Include="Assets\Script\Object\OBJTrigger\M_TreeTop.cs" />
+     <Compile Include="Assets\Script\Object\OBJTrigger\R_S1ObjMoveConveyor.cs" />
+     <Compile Include="Assets\Script\Object\OBJTrigger\R_S2ObjMoveConveyor.cs" />
+     <Compile Include="Assets\Script\Object\OBJTrigger\R_S3ObjMoveConveyor.cs" />
+     <Compile Include="Assets\Script\Object\OBJTrigger\T_Conveyor.cs" />
+     <Compile Include="Assets\Script\Object\OBJTrigger\T_MoveConveyor01.cs" />
+     <Compile Include="Assets\Script\Object\OBJTrigger\T_MoveConveyor02.cs" />
+     <Compile Include="Assets\Script\PhiScript.cs" />
+     <Compile Include="Assets\Script\UI\DrawCountdown.cs" />
+     <Compile Include="Assets\Script\UI\DrawCustomBackgroundTexture.cs" />
+     <Compile Include="Assets\Script\UI\DrawCustomButton.cs" />
+     <Compile Include="Assets\Script\UI\DrawCustomNumber.cs" />
+ <Reference Include="Phidget21.NET">
+ <HintPath>Assets\Plugins\Phidget21.NET.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
