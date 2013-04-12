@@ -11,6 +11,11 @@ public class ThreeTwoOne : MonoBehaviour {
     public GameObject TimeBackPlane;
     public Texture[] TimeBackCt;
     float TimeCount;
+
+
+
+    public GameObject PreGameStartObject;
+
 	// Use this for initialization
 	void Start () {
         Time.timeScale = 1;
@@ -56,8 +61,14 @@ public class ThreeTwoOne : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-        if (!IsInvoking("TimeBack")) {
-            Invoke("TimeBack",1);
+
+        //當說明板面結束
+        if (!PreGameStartObject.activeInHierarchy)
+        {
+            if (!IsInvoking("TimeBack"))
+            {
+                Invoke("TimeBack", 1);
+            }
         }
 	}
 }
