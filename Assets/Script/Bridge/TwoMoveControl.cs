@@ -1,34 +1,54 @@
 using UnityEngine;
 using System.Collections;
-using Phidgets;
-public class TwoMoveControl : MonoBehaviour {
+
+public class TwoMoveControl : MonoBehaviour
+{
     public GameObject[] MoveConveyor = new GameObject[2];
-    InterfaceKit ifKit;
-    public float[] phidgetvalue ;
-    public float Move01_Height,Move01_Distence;
-    public float Move02_Height, Move02_Distence;
+    public float ConveyorSpeed;
+
+    public float Move01_Height, Move01_Low;
+    public float Move02_Height, Move02_Low;
     // Use this for initialization
     void Start()
     {
-        ifKit = new InterfaceKit();
-        ifKit.open();
-        ifKit.waitForAttachment(1000);
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (ifKit != null)
+        print(MoveConveyor[0].transform.position.z);
+        if (MoveConveyor[0].transform.position.z < Move01_Height)
         {
-            phidgetvalue[0] = ifKit.sensors[0].Value;
-            phidgetvalue[1] = ifKit.sensors[3].Value;
+            if (Input.GetKey(KeyCode.A))
+            {
+                MoveConveyor[0].transform.position = new Vector3(MoveConveyor[0].transform.position.x, MoveConveyor[0].transform.position.y, MoveConveyor[0].transform.position.z + ConveyorSpeed * Time.deltaTime);
+            }
         }
-        MoveConveyor[0].transform.position = new Vector3(MoveConveyor[0].transform.position.x, MoveConveyor[0].transform.position.y, Move01_Height - phidgetvalue[0] / 999 * Move01_Distence);
-        MoveConveyor[1].transform.position = new Vector3(MoveConveyor[1].transform.position.x, MoveConveyor[1].transform.position.y, Move02_Height - phidgetvalue[1] / 999 * Move02_Distence);
+
+        if (MoveConveyor[0].transform.position.z > Move01_Low)
+        {
+            if (Input.GetKey(KeyCode.Z))
+            {
+                MoveConveyor[0].transform.position = new Vector3(MoveConveyor[0].transform.position.x, MoveConveyor[0].transform.position.y, MoveConveyor[0].transform.position.z - ConveyorSpeed * Time.deltaTime);
+            }
+        }
+        if (MoveConveyor[1].transform.position.z < Move02_Height)
+        {
+            if (Input.GetKey(KeyCode.H))
+            {
+                MoveConveyor[1].transform.position = new Vector3(MoveConveyor[1].transform.position.x, MoveConveyor[1].transform.position.y, MoveConveyor[1].transform.position.z + ConveyorSpeed * Time.deltaTime);
+            }
+        }
+
+        if (MoveConveyor[1].transform.position.z > Move02_Low)
+        {
+            if (Input.GetKey(KeyCode.B))
+            {
+                MoveConveyor[1].transform.position = new Vector3(MoveConveyor[1].transform.position.x, MoveConveyor[1].transform.position.y, MoveConveyor[1].transform.position.z - ConveyorSpeed * Time.deltaTime);
+            }
+        }
     }
-    void OnDisable()
-    {
-        this.ifKit.close();
-    }
+
 }
