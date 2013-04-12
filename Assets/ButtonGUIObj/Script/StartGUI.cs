@@ -3,7 +3,7 @@ using System.Collections;
 
 public class StartGUI : MonoBehaviour {
     public AudioSource NormalButton, StageButton;
-    public GUIStyle StartS, ExitS, BackS, RecycleS, MonkeyS, IcebergS,re01,re02,re03;
+    public GUIStyle StartS,  BackS, RecycleS, MonkeyS, IcebergS,re01,re02,re03;
     public int ChangGUI=0;
     public float T1w_up, T1w_down, T1h_up, T1h_down;
     public float T2w_up, T2w_down, T2h_up, T2h_down;
@@ -28,11 +28,7 @@ public class StartGUI : MonoBehaviour {
                 ChangGUI = 1;
                 NormalButton.Play();
             }
-            if (GUI.Button(new Rect(Screen.width * T2w_up / T2w_down, Screen.height * T2h_up / T2h_down,Screen.width * S1_w,Screen.height * S1_h),"",ExitS))
-            {
-                NormalButton.Play();
-                Application.Quit();
-            }
+           
         }
         if (ChangGUI == 1) {
             if (GUI.Button(new Rect(Screen.width * T3w_up / T3w_down, Screen.height * T3h_up / T3h_down, Screen.width * S1_w, Screen.height * S1_h),"",BackS))
@@ -49,19 +45,13 @@ public class StartGUI : MonoBehaviour {
             if (GUI.Button(new Rect(Screen.width * T5w_up / T5w_down, Screen.height * T5h_up / T5h_down, Screen.width * S2_w, Screen.height * S2_h),"",MonkeyS))
             {
                 StageButton.Play();
-                if (!IsInvoking("MoStage"))
-                {
-                    Invoke("MoStage", 1);
-                }
+                Application.LoadLevel("Monkey01");
               
             }
             if (GUI.Button(new Rect(Screen.width * T6w_up / T6w_down, Screen.height * T6h_up / T6h_down, Screen.width * S2_w, Screen.height * S2_h),"",IcebergS))
             {
                 StageButton.Play();
-                if (!IsInvoking("IceStage"))
-                {
-                    Invoke("IceStage", 1);
-                }
+                Application.LoadLevel("Iceberg01");
            
             }
         }
@@ -74,53 +64,26 @@ public class StartGUI : MonoBehaviour {
             if (GUI.Button(new Rect(Screen.width * T4w_up / T4w_down, Screen.height * T4h_up / T4h_down, Screen.width * S3_w, Screen.height * S3_h), "", re01))
             {
                 StageButton.Play();
-                if (!IsInvoking("ReStage01"))
-                {
-                    Invoke("ReStage01", 1);
-                }
+                Application.LoadLevel("R_01");
 
             }
             if (GUI.Button(new Rect(Screen.width * T5w_up / T5w_down, Screen.height * T5h_up / T5h_down, Screen.width * S3_w, Screen.height * S3_h), "", re02))
             {
                 StageButton.Play();
-                if (!IsInvoking("ReStage02"))
-                {
-                    Invoke("ReStage02", 1);
-                }
+                Application.LoadLevel("R_02");
 
             }
             if (GUI.Button(new Rect(Screen.width * T6w_up / T6w_down, Screen.height * T6h_up / T6h_down, Screen.width * S3_w, Screen.height * S3_h), "", re03))
             {
                 StageButton.Play();
-                if (!IsInvoking("ReStage03"))
-                {
-                    Invoke("ReStage03", 1);
-                }
+                Application.LoadLevel("R_03");
 
             }
         
         }
         
     }
-    void ReStage01() {
-        Application.LoadLevel("R_01");
-    }
-    void ReStage02()
-    {
-        Application.LoadLevel("R_02");
-    }
-    void ReStage03()
-    {
-        Application.LoadLevel("R_03");
-    }
-    void MoStage()
-    {
-        Application.LoadLevel("Monkey01");
-    }
-    void IceStage()
-    {
-        Application.LoadLevel("Iceberg01");
-    }
+   
 	// Update is called once per frame
 	void Update () {
 	
