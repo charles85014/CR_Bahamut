@@ -49,15 +49,21 @@ public class ReGameOverGUI : MonoBehaviour {
             if (GUI.Button(new Rect(Screen.width * NextB[0] / NextB[1], Screen.height * NextB[2] / NextB[3], Screen.height * NextB[4],
                  Screen.height * NextB[5]), "", nextbs))
             {
-                if (stagedata.StageCount == 2)
+
+                if (stagedata.StageCount == 1)
                 {
                     NormalButton.Play();
-                    Application.LoadLevel("Start");
+                    Application.LoadLevel("R_01");
                 }
-                else
+                if (stagedata.StageCount == 2 )
                 {
                     NormalButton.Play();
-                    Application.LoadLevel("R_0" + (stagedata.StageCount + 1));
+                    Application.LoadLevel("R_02");
+                }
+                if (stagedata.StageCount == 3)
+                {
+                    NormalButton.Play();
+                    Application.LoadLevel("R_03");
                 }
             }
 

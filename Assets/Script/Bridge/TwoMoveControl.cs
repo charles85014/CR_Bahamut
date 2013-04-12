@@ -18,7 +18,7 @@ public class TwoMoveControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(MoveConveyor[0].transform.position.z);
+      
         if (MoveConveyor[0].transform.position.z < Move01_Height)
         {
             if (Input.GetKey(KeyCode.A))
