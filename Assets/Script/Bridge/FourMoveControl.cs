@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using Phidgets;
+
 public class FourMoveControl : MonoBehaviour {
     public GameObject[] MoveConveyor = new GameObject[4];
     public float ConveyorSpeed;

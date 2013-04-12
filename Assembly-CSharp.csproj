@@ -37,10 +37,10 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity_4/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity_4/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -111,14 +111,10 @@
      <Compile Include="Assets\Script\Object\OBJTrigger\T_Conveyor.cs" />
      <Compile Include="Assets\Script\Object\OBJTrigger\T_MoveConveyor01.cs" />
      <Compile Include="Assets\Script\Object\OBJTrigger\T_MoveConveyor02.cs" />
-     <Compile Include="Assets\Script\PhiScript.cs" />
      <Compile Include="Assets\Script\UI\DrawCountdown.cs" />
      <Compile Include="Assets\Script\UI\DrawCustomBackgroundTexture.cs" />
      <Compile Include="Assets\Script\UI\DrawCustomButton.cs" />
      <Compile Include="Assets\Script\UI\DrawCustomNumber.cs" />
- <Reference Include="Phidget21.NET">
- <HintPath>Assets\Plugins\Phidget21.NET.dll</HintPath>
- </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
