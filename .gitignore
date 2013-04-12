@@ -7,7 +7,4 @@ Temp
 *.pidb
 *.userprefs
 *.suo
-*.csproj
-*.sln
 obj
-PlayerLogs
