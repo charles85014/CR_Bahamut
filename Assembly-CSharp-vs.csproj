@@ -37,10 +37,10 @@
     <Reference Include="System.XML" />
 	<Reference Include="System.Core" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity_4/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity_4/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +70,9 @@
      <Compile Include="Assets\Common\StageData.cs" />
      <Compile Include="Assets\Common\TestUseChangeStage.cs" />
      <Compile Include="Assets\Common\ThreeTwoOne.cs" />
+     <Compile Include="Assets\Script\Arduino\Arduino.cs" />
+     <Compile Include="Assets\Script\Arduino\Ardunio_CR.cs" />
+     <Compile Include="Assets\Script\Arduino\LightSwitch.cs" />
      <Compile Include="Assets\Script\BGMAudio\StartBGM.cs" />
      <Compile Include="Assets\Script\Bridge\FourMoveControl.cs" />
      <Compile Include="Assets\Script\Bridge\ThreeMoveControl.cs" />
